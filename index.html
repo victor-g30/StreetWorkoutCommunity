@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="preload" href="assets/RidleyGrotesk-ExtraBold..otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="assets/WorkSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="lightModeTrue.css" as="style">
+    <link rel="preload" href="assets/icons/lightMode.svg" as="image">
+    <link rel="preload" href="assets/mainBackground.webp">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <link id="linkLightModeCSS" rel="stylesheet" href="" />
+    <title>Street Workout Community</title>
+    <script src="main.js" defer></script>
+  </head>
+  <body id="main">
+    <div id="loadingPage">
+      <div>
+        <img src="assets/loading.svg" />
+        <h1>Street Workout Community</h1>
+      </div>
+    </div>
+    <nav>
+      <div class="deployable">
+        <img id="deployable" src="assets/deploy.svg" />
+      </div>
+      <div class="logos">
+        <a href="https://streetworkoutcommunity.000webhostapp.com/"
+          ><img class="logo1" src="assets/logoSwc.png"
+        /></a>
+        <div
+          style="border: solid #fff; border-width: 0px 0px 0px 2px; height: 50%"
+        ></div>
+        <a href="https://hive.io/"
+          ><img class="logo2" src="assets/logoHive.png"
+        /></a>
+      </div>
+      <ul>
+        <li class="navLi"><a href="#main">INICIO</a></li>
+        <li class="navLi"><a href="#nosotros">NOSOTROS</a></li>
+        <li class="navLi"><a href="#directiva">DIRECTIVA</a></li>
+        <li class="navLi"><a href="#informacion">INFORMACIÓN</a></li>
+        <li class="navLi"><button id="toggleDarkLightMode" class="toggleDarkLightMode"><img class="lightDarkModeIcon" id="darkLightModeImg" src="assets/icons/darkMode.svg"></button></li>
+      </ul>
+      <div class="darkLightModeDiv">
+          <button id="toggleDarkLightModeResponsive" class="toggleDarkLightMode"><img class="lightDarkModeIcon" id="darkLightModeImg" src="assets/icons/darkMode.svg"></button>
+      </div>
+      <div id="deployed" class="deployed">
+        <div>
+          <img src="assets/ex.svg" id="ex" class="ex" />
+          <h3>Menú</h3>
+          <ul id="deployList">
+            <li>
+              <a href="#main"
+                ><img
+                  class="listHexagon"
+                  src="assets/HexagonoList.png"
+                />Inicio</a
+              >
+            </li>
+            <li>
+              <a href="#nosotros"
+                ><img
+                  class="listHexagon"
+                  src="assets/HexagonoList.png"
+                />Nosotros</a
+              >
+            </li>
+            <li>
+              <a href="#informacion"
+                ><img
+                  class="listHexagon"
+                  src="assets/HexagonoList.png"
+                />información</a
+              >
+            </li>
+            <li>
+              <a href="#contacto"
+                ><img
+                  class="listHexagon"
+                  src="assets/HexagonoList.png"
+                />Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="principal">
+        <div class="title">
+          <h1>
+            Street <br />
+            Workout <br />
+            Community
+          </h1>
+        </div>
+        <div class="hexagonContainer">
+          <img class="hexagonHive" src="assets/hexagonHive.png" />
+          <img class="hexagonSwc" src="assets/hexagonSwc.png" />
+        </div>
+        <img class="principalArrow" src="assets/arrow.svg" />
+      </div>
+      <div id="nosotros" class="divider">
+        <h1>Comunidad Deportiva</h1>
+      </div>
+      <div class="nosotros">
+        <img class="hexagonsAsset" src="assets/hexagonsAsset.png" />
+        <div>
+          <div>
+            <h1 id="nosotrosH1">Quiénes Somos</h1>
+            <img id="nosotrosUndertitle" class="undertitle" src="assets/undertitleAsset.svg" />
+          </div>
+          <p>
+            La Street Workout Community (SWC) es una
+            <a href="https://hive.blog/trending/hive-108943"
+              >Comunidad Deportiva</a
+            >
+            de la Cadena de Bloques
+            <a href="https://hive.blog/">Hive</a> que nace el 1° de enero de
+            2022
+            <a
+              href="https://hive.blog/hive-108943/@swc-oficial/bienvenidos-a-swc-street-workout-community-or-welcome-to-swc-street-workout-community-esp-or-eng"
+              >Click aqui</a
+            >. El Líder Fundador de esta comunidad es Manuel Ramos
+            (@manuelramos). A 18 meses de su fundación en el entorno digital,
+            SWC ha llevado a cabo 21 eventos; 20 eventos en la disciplina de
+            Street Workout y 1 en Calistenia. Además SWC ha participado en 2
+            actividades relacionadas con la rehabilitación de un circuito de
+            barras y la construcción de un circuito de barras. Todas estas
+            acciones fueron llevadas a cabo en el plano presencial. De los 23
+            eventos, 21 se han llevado a cabo en varios estados de Venezuela y 2
+            en Colombia
+          </p>
+        </div>
+        <img src="assets/tabletsSWC.webp" />
+        <div>
+          <p>
+            El Street Workout (SW) es una disciplina deportiva urbana extrema
+            que se practica en la calle, al aire libre y en espacios cubiertos;
+            la misma se basa en la realización de ejercicios básicos como
+            dominadas, flexiones o abdominales. Movimientos corporales que se
+            llevan a cabo únicamente con el peso corporal de cada ejecutante y
+            gracias a distintos aparatos diseñados para tal fin, comúnmente
+            llamadas barras. El desafío de cada atleta de Street Workout es
+            estar en equilibrio en contra de la gravedad. La organización es
+            desde el interior de nuestra Comunidad, con asesores técnicos que
+            nos han apoyado desde el inicio de este sueño, hoy día, ya una
+            propuesta que se materializa con el apoyo también de cada uno de los
+            atletas que hacen vida en SWC, comunidad que hace vida en el entorno
+            digital, en la Cadena de Bloques HIVE, nuestro patrocinador oficial.
+          </p>
+        </div>
+        <img src="assets/TabletsSWC-2.png" />
+      </div>
+      <div class="swcDivider">
+        <hr />
+        <img src="assets/swcLogoDivider.png" />
+        <hr />
+      </div>
+      <div class="misionVision">
+        <div class="vision">
+          <div>
+            <h2>VISIÓN</h2>
+            <img class="undertitle" src="assets/undertitleAsset.svg" />
+          </div>
+          <p>
+            Street Workout Community como comunidad deportiva  será una construcción colectiva,  una comunidad sana  y diversa al unir nuestro recursos materiales, compartir  habilidades y nuestro  talento humano. Será  una comunidad donde prevalecerán principios fundamentales como amor, paz, respeto, tolerancia, compromiso, lealtad, compañerismo, libertad y solidaridad.
+          </p>
+        </div>
+
+        <div class="mision">
+          <h2>MISIÓN</h2>
+          <img class="undertitle" src="assets/undertitleAsset.svg" />
+        </div>
+        <p>
+          La Misión de Street Workout Community como Comunidad Deportiva, es la
+          práctica y promoción de la disciplina deportiva conocida como Street
+          Workout, disciplina deportiva urbana extrema que se practica en la
+          calle, al aire libre y en espacios cubiertos;, basada en la
+          realización de movimientos y posiciones corporales especialmente
+          orientados al control del peso corporal de cada ejecutante, tanto en
+          favor como en desafío de la gravedad, combinado con el uso de
+          distintos aparatos diseñados para tal fin, comúnmente llamadas barras.
+          El desafío de cada atleta de Street Workout es mantenerse en
+          equilibrio en contra de la gravedad; participar activamente en
+          encuentros, exhibiciones, prácticas y competencias de esta disciplina
+          como organización social, vista como Comunidad; tanto de atletas como
+          asesores técnicos, monitores, entrenadores y asesores en esta
+          disciplina deportiva urbana extrema.
+        </p>
+      </div>
+      <div class="assetBackground"></div>
+      <div class="divider">
+        <h1>Equipo de moderación</h1>
+      </div>
+      <div id="directiva" class="directiva">
+        <img id="dividerModeradores1" src="assets/dividerModeradores1.svg" />
+        <div>
+          <div>
+            <a href="https://hive.blog/@manuelramos/posts"><div style="background-image: url(http://drive.google.com/uc?export=view&id=1v0MxkCdTs3BuiJbDefyUNV27w5m1XedC); background-position: top;"></div></a>
+            <a href="https://hive.blog/@manuelramos/posts">Manuel Ramos</a>
+            <h5>CEO de Street Workout Community</h5>
+          </div>
+          <div>
+            <a href="https://hive.blog/@marlenyaragua/posts"><div style="background-image: url(https://drive.google.com/uc?export=view&id=15aXZhwTMDmgcpvPm9kt5vr9oJHkyBHiJ)""></div></a>
+            <a href="https://hive.blog/@marlenyaragua/posts">Marleny Suarez</a>
+            <h5>Asesora Técnica</h5>
+          </div>
+          <div>
+            <a href="https://hive.blog/@victorg30/posts"><div style="background-image: url(https://drive.google.com/uc?export=view&id=1SuPfbU15pvtc1BORLrlfsOwoSzSORCUN);background-position: bottom;"></div></a>
+            <a href="https://hive.blog/@victorg30/posts">Victor Guerrero</a>
+            <h5>Moderador</h5>
+          </div>
+        </div>
+        <img id="dividerModeradores2" src="assets/dividerModeradores2.svg" />
+        <div>
+          <div>
+            <a href="https://hive.blog/@johnlinares/posts"><div style="background-image: url(https://drive.google.com/uc?export=view&id=1rUX3iX1tYiGFy9IdFxnDKSglIAwaYDyG); background-position: 0;"></div></a>
+            <a href="https://hive.blog/@johnlinares/posts">John Linarez</a>
+            <h5>Moderador</h5>
+          </div>
+          <div>
+            <a href="https://hive.blog/@joscar-sw/posts"><div style="background-image: url(https://drive.google.com/uc?export=view&id=14UEHujP6Wr5Y3tqvwRXaAUdDSZPcosjn
+              ); background-position: 0 15%;"></div></a>
+            <a href="https://hive.blog/@joscar-sw/posts">Joscar Mundo</a>
+            <h5>Moderador</h5>
+          </div>
+        </div>
+      </div>
+
+      <div id="informacion" class="divider">
+        <h1>Información</h1>
+      </div>
+
+      <div class="informacion">
+        <h2>
+          Street workout community <br />
+          (SWC)
+        </h2>
+        <h1>Eventos Realizados</h1>
+        <img class="undertitle" src="assets/undertitleAsset.svg" />
+        <div id="eventosMostrados" class="eventosMostrados">
+          </div>
+        <div>
+          <div class="eventosTitleContainer">
+            <hr />
+            <h2 class="eventosTitle">EVENTOS 2022</h2>
+            <img class="deployEventArrow" src="assets/arrow.svg" />
+            <hr />
+          </div>
+          <div id="eventos2022">
+            <!--Final de los Eventos 2022-->
+          </div>
+        </div>
+        <div>
+          <div class="eventosTitleContainer">
+            <hr />
+            <h2 class="eventosTitle">EVENTOS 2023</h2>
+            <img class="deployEventArrow" src="assets/arrow.svg" />
+            <hr />
+          </div>
+          <div id="eventos2023">
+            <!--Final de los Eventos 2023-->
+          </div>
+        </div>
+      </div>
+
+      <div class="divider">
+        <h1>Comunidades aliadas</h1>
+      </div>
+      <div class="alianza">
+        <img id="assetAliados" src="assets/hexagonsAsset.png" />
+        <img id="assetAliados2" src="assets/hexagonsAsset.png" />
+        <div class="aliados">
+          <a href="https://hive.io/"><img id="logoHiveComunidad" src="assets/logoHive2.png" /></a>
+          <a href="https://3speak.tv/"><img id="logo3speakComunidad" src="assets/3speakLogo.png" /></a>
+        </div>
+        <div class="contenidoAlianza">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Dignissimos autem culpa quisquam aliquid repudiandae, obcaecati
+            consequuntur doloribus quis. Consequuntur ullam nemo sed ipsam
+            reiciendis! Officiis laudantium aut omnis reiciendis adipisci? Lorem
+            ipsum, dolor sit amet consectetur adipisicing elit. Atque molestias
+            ipsum sequi consequuntur quos. Rerum quae quidem nemo. At atque
+            placeat nihil ratione laboriosam repellat fuga voluptas amet,
+            explicabo modi. Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Ullam adipisci aperiam dignissimos aut impedit officia rerum.
+            Ipsa unde soluta, fugit dolore temporibus, rerum quia fuga officiis
+            recusandae non doloribus animi! Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Voluptates veritatis, accusantium
+            atque, molestiae voluptate ea corporis aliquid amet asperiores saepe
+            aut doloremque sequi. Vero laudantium eveniet animi unde, at
+            ratione.
+          </p>
+          <div class="informacionAssets">
+            <img id="web3" src="assets/informationAsset.webp" />
+            <img id="web3Coins" src="assets/web3Coins.png" />
+          </div>
+        </div>
+      </div>
+
+      <div id="creditos" class="creditos">
+        <img src="assets/formHexagons.png" class="creditsHexagons" />
+        <h1>Creditos</h1>
+        <div>
+          <img id="firmaManuelRamos" src="assets/firmaManuelRamos.png">
+          <h4>CEO y Líder  Fundador Street Workout Community<br><a href="#directiva">@manuelramos</a></h3>
+          <p>
+            Compilación y Redacción <br>
+            Dra.Marleny Suárez Silva <br>
+            Asesora Téctnica Street Workout Community <br>
+            <a href="#directiva">@marlenyaragua</a> <br>
+            MGSS/mgss
+
+          </p>
+          <img id="swcTeam" src="assets/swcTeam.png" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footerRedes">
+        <a href="https://hive.blog/@swc-oficial"
+          ><img src="assets/icons/hiveIcon.svg"
+        /></a>
+        <a href="https://peakd.com/@swc-oficial/posts"
+          ><img src="assets/icons/peakdIcon.svg"
+        /></a>
+        <a href="https://3speak.tv/user/swc-oficial"
+          ><img src="assets/icons/3speakIcon.svg"
+        /></a>
+        <a href="https://discord.com/invite/BNaGWZfQvA"
+          ><img src="assets/icons/discordIcon.png"
+        /></a>
+        <a href="https://twitter.com/swc_io"
+          ><img src="assets/icons/twitterIcon.svg"
+        /></a>
+        <a href="https://www.youtube.com/@swc-io"
+          ><img src="assets/icons/youtubeIcon.svg"
+        /></a>
+        <a href="https://www.facebook.com/SWC.HIVE/"
+          ><img src="assets/icons/facebookIcon.png"
+        /></a>
+        <a href="https://www.instagram.com/streetworkoutcommunity/"
+          ><img src="assets/icons/instagramIcon.svg"
+        /></a>
+      </div>
+      <div class="footerInformation">
+        <div class="footerMenu">
+          <h3>Menú</h3>
+          <ul>
+            <li>
+              <a href="#main"
+                ><img
+                  class="listHexagon2"
+                  src="assets/HexagonoList.png"
+                />Inicio</a
+              >
+            </li>
+            <li>
+              <a href="#nosotros"
+                ><img
+                  class="listHexagon2"
+                  src="assets/HexagonoList.png"
+                />Nosotros</a
+              >
+            </li>
+            <li>
+              <a href="#informacion"
+                ><img
+                  class="listHexagon2"
+                  src="assets/HexagonoList.png"
+                />Información</a
+              >
+            </li>
+            <li>
+              <a href="#contacto"
+                ><img
+                  class="listHexagon2"
+                  src="assets/HexagonoList.png"
+                />Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footerContact">
+          <h3>Contáctanos</h3>
+          <p>Streetworkoutcommunity3773@gmail.com</p>
+          <p id="terminosYCondiciones"
+            >Aviso de Privacidad,<br />
+            Términos y Condiciones</p
+          >
+          <div id="terminosYCondicionesDesplegable">
+            <h1>Aviso de Terminos y Condiciones</h1>
+            <div>
+              <p>
+                Bienvenidos a nuestra plataforma informativa sobre Street
+                Workout y calistenia. <br><br>1. Aceptación de los términos y
+                condiciones: Al acceder a nuestra plataforma, estás aceptando
+                los términos y condiciones establecidos en este documento. Si no
+                estás de acuerdo con ellos, te pedimos que abandones el sitio
+                web. <br><br>2. Uso del sitio web: Nuestro sitio web está diseñado para
+                proporcionar información sobre Deporte, Street Workout y
+                calistenia. No se permite el uso del sitio web con fines
+                ilegales o no autorizados. <br><br>3. Registro de usuario: Para acceder
+                a ciertas secciones del sitio web, es necesario registrarse como
+                usuario. Es importante que proporciones información precisa y
+                actualizada. No compartiremos tu información personal con
+                terceros sin tu consentimiento. <br><br>4. Propiedad intelectual: Todo
+                el contenido publicado en nuestro sitio web es propiedad
+                exclusiva de la plataforma o de terceros que han otorgado los
+                derechos correspondientes. No se permite la reproducción,
+                distribución o modificación del contenido sin autorización
+                previa. <br><br>5. Modificaciones en
+                los términos y condiciones: Nos reservamos el derecho de
+                modificar los términos y condiciones en cualquier momento sin
+                previo aviso. Es responsabilidad del usuario revisar
+                periódicamente estos términos para estar al tanto de cualquier
+                cambio. <br><br>Al utilizar nuestro sitio web, estás aceptando estos
+                términos y condiciones. Si tienes alguna pregunta o inquietud,
+                no dudes en contactarnos. ¡Gracias por elegirnos como tu
+                plataforma informativa sobre Deporte, Street Workout y
+                calistenia!
+              </p>
+            </div>
+            <button id="aceptarTerminos">
+              Acepto los terminos y Condiciones
+            </button>
+          </div>
+        </div>
+        <div class="footerSWC">
+          <a href="https://streetworkoutcommunity.000webhostapp.com/"
+            ><img id="swcLogo" src="assets/footerSWC.png"
+          /></a>
+          <div>
+            <a href="https://www.facebook.com/SWC.HIVE/"
+              ><img src="assets/icons/whiteFacebookIcon.png"
+            /></a>
+            <a href="https://www.instagram.com/streetworkoutcommunity/"
+              ><img src="assets/icons/whiteInstagramIcon.png"
+            /></a>
+            <a href="https://twitter.com/swc_io"
+              ><img src="assets/icons/whiteTwitterIcon.png"
+            /></a>
+            <a href=""><p>Síguenos en nuestras redes sociales</p></a>
+          </div>
+          <p>@streetworkoutcommunity</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

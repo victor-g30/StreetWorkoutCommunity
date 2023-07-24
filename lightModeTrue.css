@@ -1,0 +1,25 @@
+nav * {
+  color: white;
+}
+:root {
+  --backgroundColor: rgb(244, 244, 244);
+  --fontColor: black;
+}
+
+.deployEventArrow,
+#dividerModeradores1,
+#dividerModeradores2,
+.swcDivider img,
+.eventNav ul li,
+.undertitle,
+#submitButton,
+.contact {
+  filter: invert();
+}
+.directiva a div {
+  border: solid 0.8vw black;
+}
+
+#firmaManuelRamos {
+  filter: none;
+}
