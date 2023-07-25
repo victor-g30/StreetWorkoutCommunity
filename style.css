@@ -88,6 +88,7 @@ h4{
   margin-top: 5vw;
   font-size: 5vw;
   text-transform: uppercase;
+  letter-spacing: normal;
   font-family: HiveRidley, sans-serif;
   animation: loadingSwcH1 1s alternate infinite;
 }
