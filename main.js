@@ -684,13 +684,13 @@ function addEvents(eventPrint, fatherEventDiv) {
     <h3>Fecha de realización: ${eventsList.fecha[i]}.</h3>
     <h3>Información del evento e imágenes</h3>
     <p>
-      <a href="${eventsList.informacion[i]}">Click aquí</a>
-      para visualizar las imagenes del evento.
+      <a href="${eventsList.informacion[i]}">
+      Visualizar las imagenes del evento.</a>
     </p>
     <h3>Instagram</h3>
     <p><a href="${
       eventsList.instagram[i]
-    }">Click aquí</a> para Ver el instagram.</p>
+    }">Ver el instagram.</a></p>
     <div class="eventNav" data-value="0">
                 <ul id="moveButtons">
                     <li class="buttons" value="1"><</li>

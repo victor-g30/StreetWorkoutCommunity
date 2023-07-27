@@ -46,6 +46,9 @@ h4{
   font-style: italic;
   font-weight: 400;
 }
+h4 a{
+  text-transform: none;
+}
 
 @font-face {
   font-family: HiveRidley;
@@ -745,7 +748,7 @@ nav ul li {
   margin-left: 5%;
   text-align: left;
   font-weight: 400;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .creditos p a, .creditos div a{
