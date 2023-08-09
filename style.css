@@ -6,38 +6,32 @@
   --h1FontSize: 2.5vw;
   --pFontSize: 1.5vw;
 }
-
 * {
   scroll-behavior: smooth;
   color: var(--fontColor);
 }
-
 main a:visited,
 main a {
   color: var(--HiveRedColor);
   text-decoration: underline;
 }
-
 body {
   margin: 0;
   background-color: var(--backgroundColor);
 }
-
-.misionVision h2{
-  letter-spacing: .1em;
+.misionVision h2 {
+  letter-spacing: 0.1em;
 }
-
-h5{
+h5 {
   text-align: center;
-  margin-top: calc(var(--pFontSize) /3);
+  margin-top: calc(var(--pFontSize) / 3);
   color: var(--fontColor);
-  font-size: 0.8em;
+  font-size: calc(var(--pFontSize) / 1.2);
   font-family: WorkSans;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 350;
 }
-
-h4{
+h4 {
   text-align: center;
   margin-top: 0;
   color: var(--fontColor);
@@ -46,10 +40,9 @@ h4{
   font-style: italic;
   font-weight: 400;
 }
-h4 a{
+h4 a {
   text-transform: none;
 }
-
 @font-face {
   font-family: HiveRidley;
   src: url(assets/RidleyGrotesk-ExtraBold..otf);
@@ -58,12 +51,11 @@ h4 a{
   font-family: WorkSans;
   src: url(assets/WorkSans-VariableFont_wght.ttf);
 }
-
 #loadingPage {
   position: fixed;
   display: block;
   grid-template-columns: 100%;
-  grid-row: 10% 10%;
+  grid-row: 10%;
   justify-content: center;
   background-color: var(--backgroundColor);
   margin: auto;
@@ -73,7 +65,6 @@ h4 a{
   right: 0;
   z-index: 1000;
 }
-
 #loadingPage div img {
   display: flex;
   align-items: center;
@@ -82,7 +73,6 @@ h4 a{
   margin-top: 25vh;
   animation: loadingRotate infinite 2s linear;
 }
-
 #loadingPage div h1 {
   display: flex;
   justify-content: center;
@@ -95,7 +85,6 @@ h4 a{
   font-family: HiveRidley, sans-serif;
   animation: loadingSwcH1 1s alternate infinite;
 }
-
 @keyframes loadingRotate {
   from {
     transform: rotate(0deg);
@@ -104,7 +93,6 @@ h4 a{
     transform: rotate(360deg);
   }
 }
-
 @keyframes loadingSwcH1 {
   from {
     opacity: 1;
@@ -113,25 +101,20 @@ h4 a{
     opacity: 0.2;
   }
 }
-
 a,
 p {
   font-size: var(--pFontSize);
 }
-
 h1 {
   font-size: var(--h1FontSize);
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
-
 nav a {
   font-family: WorkSans, sans-serif;
 }
-
 a {
   text-decoration: none;
 }
-
 nav {
   padding: 0 5%;
   margin: 0;
@@ -146,17 +129,14 @@ nav {
   z-index: 10;
   transition: all 0.5s;
 }
-
 nav .logos {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-
 #deployable {
   cursor: pointer;
 }
-
 nav .deployable {
   display: none;
   width: 9vw;
@@ -166,48 +146,39 @@ nav .deployable {
   justify-content: center;
   align-self: center;
 }
-
 .deployable img {
   width: 50%;
 }
-
 nav div div {
   margin-right: 5%;
 }
-
 .navLi,
 .navLi a {
   transition: all 0.5s;
 }
-
 .navLi:hover {
   transform: scale(1.08);
   transition: all 0.5s;
 }
-
 .navLi a:hover {
   color: var(--HiveRedColor);
   transition: all 0.5s;
 }
-
 nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
 nav ul li {
   list-style: none;
   margin: auto;
 }
-
 .logo1 {
   width: 90%;
 }
 .logo2 {
   width: 100%;
 }
-
 .deployed {
   position: fixed;
   bottom: 0;
@@ -220,7 +191,6 @@ nav ul li {
   opacity: 0;
   transition: opacity 0.5s;
 }
-
 .deployed > div {
   background-color: rgb(11, 11, 18);
   position: absolute;
@@ -230,39 +200,32 @@ nav ul li {
   right: 1vw;
   box-shadow: 0 0 2vw black;
 }
-
 .deployed div > h3 {
   text-align: center;
   font-family: HiveRidley, sans-serif;
   font-size: 5vw;
   margin-top: 3vw;
 }
-
 .deployed div ul {
   display: grid;
   grid-template-columns: 100%;
   gap: 5vw;
 }
-
 .deployed div ul li {
   margin-left: 2vw;
 }
-
 .listHexagon {
   width: 3vw;
   margin-right: 1.5vw;
 }
-
 .deployed div ul li a {
   font-size: 4vw;
   transition: all 0.5s;
 }
-
 .deployed div ul li a:hover {
   color: var(--HiveRedColor);
   transition: all 0.5s;
 }
-
 .ex {
   position: absolute;
   width: 10%;
@@ -270,7 +233,6 @@ nav ul li {
   top: 3vw;
   cursor: pointer;
 }
-
 .principal {
   position: relative;
   font-family: HiveRidley, sans-serif;
@@ -286,11 +248,9 @@ nav ul li {
   min-height: 550px;
   width: 100%;
 }
-
 .principal * {
   margin: auto;
 }
-
 .principal h1 {
   line-height: 5.5vw;
   font-size: 5.5vw;
@@ -298,7 +258,6 @@ nav ul li {
   color: white;
   text-transform: uppercase;
 }
-
 .hexagonContainer {
   width: 100%;
   padding: 0;
@@ -307,7 +266,6 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
 }
-
 .hexagonHive {
   position: relative;
   right: 10%;
@@ -315,7 +273,6 @@ nav ul li {
   animation: upDown 1s infinite alternate ease-in-out;
   z-index: 1;
 }
-
 .hexagonSwc {
   position: absolute;
   left: 35%;
@@ -323,7 +280,6 @@ nav ul li {
   width: 30%;
   animation: upDown 1s infinite alternate ease-in-out 1s;
 }
-
 @keyframes upDown {
   from {
     transform: translateY(0);
@@ -332,7 +288,6 @@ nav ul li {
     transform: translateY(2vh);
   }
 }
-
 .principalArrow {
   width: 4%;
   position: absolute;
@@ -341,43 +296,36 @@ nav ul li {
   bottom: 5vw;
   animation: upDown 0.8s infinite alternate ease-in-out;
 }
-
-.toggleDarkLightMode{
+.toggleDarkLightMode {
   border-radius: 50%;
-  border: .2vw solid white;
+  border: 0.2vw solid white;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-
-#toggleDarkLightMode{
+#toggleDarkLightMode {
   width: calc(var(--pFontSize) + 2vh);
   height: calc(var(--pFontSize) + 2vh);
   align-items: center;
   justify-content: center;
 }
-
-#toggleDarkLightModeResponsive{
+#toggleDarkLightModeResponsive {
   margin: auto;
-  width: calc( var(--h1FontSize) + 2vh);
+  width: calc(var(--h1FontSize) + 2vh);
   height: calc(var(--h1FontSize) + 2vh);
   align-self: center;
 }
-
-.darkLightModeDiv{
+.darkLightModeDiv {
   display: none;
 }
-
-#toggleDarkLightMode img{
+#toggleDarkLightMode img {
   width: 90%;
 }
-
-#toggleDarkLightModeResponsive img{
+#toggleDarkLightModeResponsive img {
   width: 70%;
 }
-
 .divider {
   background: linear-gradient(
     90deg,
@@ -386,7 +334,6 @@ nav ul li {
   );
   margin: 0;
 }
-
 .divider h1 {
   font-family: WorkSans, sans-serif;
   color: white;
@@ -395,49 +342,40 @@ nav ul li {
   text-align: center;
   text-transform: uppercase;
 }
-
 .nosotros {
   position: relative;
   display: grid;
   grid-template-columns: 50% 50%;
   background-color: var(--backgroundColor);
-
   height: max-content;
   margin: 5% auto;
   align-items: center;
   justify-content: center;
   overflow: visible;
 }
-
 .nosotros div {
   font-family: HiveRidley, sans-serif;
   margin: 5%;
   z-index: 3;
 }
-
 .nosotros div h1 {
   text-transform: uppercase;
 }
-
 #nosotrosH1 {
   margin-bottom: 0;
 }
-
 .nosotros div p {
   font-family: WorkSans, sans-serif;
   text-align: justify;
 }
-
 .nosotros img {
   width: 70%;
   justify-self: center;
   z-index: 2;
 }
-
 #nosotrosUndertitle {
   width: 30vw;
 }
-
 .hexagonsAsset {
   position: absolute;
   right: 2%;
@@ -445,13 +383,11 @@ nav ul li {
   max-width: 80%;
   opacity: 0.2;
 }
-
 .assetBackground {
   margin: 0;
   width: 100%;
 }
-
-.assetBackground{
+.assetBackground {
   width: 100%;
   height: 100vh;
   background-image: url(assets/assetHivePhones.webp);
@@ -459,13 +395,11 @@ nav ul li {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .alianza {
   display: grid;
   position: relative;
   overflow: hidden;
 }
-
 .aliados {
   display: flex;
   flex-direction: column;
@@ -474,18 +408,15 @@ nav ul li {
   margin-top: 10%;
   gap: 10vw;
 }
-
 .aliados a {
   width: 80%;
   display: flex;
   justify-content: center;
   margin: auto;
 }
-
 .aliados img {
   width: 50vw;
 }
-
 #assetAliados {
   position: absolute;
   z-index: -1;
@@ -493,7 +424,6 @@ nav ul li {
   top: 0;
   right: -10%;
 }
-
 #assetAliados2 {
   position: absolute;
   z-index: -1;
@@ -501,7 +431,6 @@ nav ul li {
   top: 32%;
   left: -10%;
 }
-
 .contenidoAlianza {
   font-family: HiveRidley, sans-serif;
   display: grid;
@@ -510,19 +439,16 @@ nav ul li {
   margin: 10% auto;
   align-items: center;
 }
-
 .alianza p {
   padding: 0 10%;
   text-align: justify;
   font-family: WorkSans, sans-serif;
   margin-bottom: 10%;
 }
-
 .informacionAssets {
   position: relative;
   width: 100%;
 }
-
 .informacion {
   margin: 0;
   padding: 3vw 5vw;
@@ -533,20 +459,16 @@ nav ul li {
     var(--backgroundColor) 100%
   );
 }
-
 .informacion hr {
   margin: 10% 10%;
 }
-
 .eventosTitleContainer > hr {
   margin: 2% 20%;
 }
-
 .eventosTitle {
   text-align: center;
   font-size: 2vw;
 }
-
 .eventosTitleContainer img {
   width: 3vw;
   display: flex;
@@ -554,75 +476,60 @@ nav ul li {
   margin: auto;
   cursor: pointer;
 }
-
 #eventos2022,
 #eventos2023 {
   display: none;
   opacity: 0;
   transition: all 0.5s;
 }
-
 #eventos2022 > div,
 #eventos2023 > div {
   margin-bottom: 10%;
 }
-
 .informacion h1,
 .informacion h2 {
   font-family: HiveRidley, sans-serif;
 }
-
 .informacion h2 {
   font-size: 2vw;
 }
-
 .informacion h1 {
   text-transform: uppercase;
   margin-bottom: 0;
 }
-
 .informacion h3 {
   font-family: WorkSans, sans-serif;
   font-weight: 650;
 }
-
 .informacion > img {
   width: 32vw;
   margin-top: 0;
 }
-
 .eventosMostrados {
   margin: 5% auto;
 }
-
 .deployEventArrow {
   transition: all 0.5s ease;
 }
-
 .informacion > div {
   position: relative;
 }
-
 .backgroundInformacion {
   position: absolute;
   top: 0;
   right: 0;
 }
-
 .informacion > h2 {
   text-align: center;
 }
-
 .informacion p {
   font-family: WorkSans, sans-serif;
   font-size: var(--pFontSize);
   margin: 0;
 }
-
 #web3 {
   width: 100%;
 }
-
 #web3Coins {
   position: absolute;
   top: 5%;
@@ -630,7 +537,6 @@ nav ul li {
   right: 12%;
   width: 25%;
 }
-
 .directiva {
   font-family: HiveRidley, sans-serif;
   background-color: var(--backgroundColor);
@@ -639,7 +545,6 @@ nav ul li {
   display: grid;
   gap: 10%;
 }
-
 .directiva div {
   display: flex;
   width: 100%;
@@ -653,19 +558,16 @@ nav ul li {
   gap: 0;
   text-align: center;
 }
-
 .directiva > div > div a {
   color: var(--fontColor);
   font-family: WorkSans, sans-serif;
-  margin-top: calc(var(--pFontSize)/1.2);
+  margin-top: calc(var(--pFontSize) / 1.2);
   font-weight: 500;
   text-transform: uppercase;
 }
-
 .directiva img {
   margin: auto;
 }
-
 .directiva a > div {
   width: 18vw;
   max-width: 260px;
@@ -676,17 +578,14 @@ nav ul li {
   background-position: center;
   background-size: cover;
 }
-
 #dividerModeradores1 {
   width: 60vw;
   margin-left: 0;
 }
-
 #dividerModeradores2 {
   width: 50vw;
   margin-right: 0;
 }
-
 .swcDivider {
   display: flex;
   gap: 0;
@@ -694,12 +593,10 @@ nav ul li {
   align-items: center;
   justify-content: center;
 }
-
 .swcDivider img {
   margin: 0;
   width: 20vw;
 }
-
 .swcDivider > hr {
   height: 0;
   width: 100%;
@@ -707,28 +604,23 @@ nav ul li {
   border-style: solid;
   border-width: 2px;
 }
-
 .misionVision {
   margin: auto 8%;
   margin-bottom: 8%;
 }
-
 .misionVision h2 {
   font-family: HiveRidley, sans-serif;
   font-size: 2vw;
   margin-bottom: 0;
 }
-
 .undertitle {
   margin-top: 0;
   width: 18.5vw;
 }
-
 .misionVision p {
   font-family: WorkSans, sans-serif;
   font-size: var(--pFontSize);
 }
-
 .creditos {
   position: relative;
   padding: 3%;
@@ -737,32 +629,29 @@ nav ul li {
   margin: 0;
   text-transform: uppercase;
 }
-
 .creditos h1 {
   text-align: center;
   margin-bottom: 0;
 }
-
-.creditos p, .creditos p a{
+.creditos p,
+.creditos p a {
   margin-top: 5%;
   margin-left: 5%;
   text-align: left;
   font-weight: 400;
   text-transform: none;
 }
-
-.creditos p a, .creditos div a{
+.creditos p a,
+.creditos div a {
   margin: 0;
   text-decoration: none;
 }
-
 #swcTeam {
   width: 40%;
   max-width: 535px;
   display: flex;
   margin: auto;
 }
-
 .creditsHexagons {
   position: absolute;
   top: -3%;
@@ -770,15 +659,13 @@ nav ul li {
   width: 40%;
   z-index: -1;
 }
-
-#firmaManuelRamos{
+#firmaManuelRamos {
   width: 30%;
   display: flex;
   margin: 0 auto;
   filter: invert();
   max-width: 400px;
 }
-
 footer .footerRedes {
   display: flex;
   background-color: rgb(47, 45, 42);
@@ -788,11 +675,9 @@ footer .footerRedes {
   padding: 0.5%;
   padding-top: 1%;
 }
-
 .footerRedes img {
   width: 4vw;
 }
-
 .footerInformation {
   display: grid;
   grid-template-columns: 25% 40% 35%;
@@ -800,45 +685,36 @@ footer .footerRedes {
   margin: 0;
   background-color: rgb(24, 23, 21);
 }
-
 footer h3 {
   font-family: HiveRidley, sans-serif;
   text-transform: uppercase;
   margin-left: 4vw;
   font-size: 1.5vw;
 }
-
 footer * {
   color: white;
 }
-
 footer {
   font-family: WorkSans, sans-serif;
 }
-
 .listHexagon2 {
   width: 1.8vw;
   margin-right: 1.5vw;
 }
-
 .footerMenu ul {
   padding-left: 2vw;
 }
-
 .footerMenu li {
   list-style: none;
   margin-top: 2vw;
   margin-left: 0;
 }
-
 .footerMenu li a {
   font-size: 1.5vw;
 }
-
 .footerContact div p {
   font-size: 1.5vw;
 }
-
 #terminosYCondiciones {
   font-weight: 500;
   font-size: 1.5vw;
@@ -846,7 +722,7 @@ footer {
   text-decoration: underline;
   cursor: pointer;
 }
-#terminosYCondicionesDesplegable{
+#terminosYCondicionesDesplegable {
   display: none;
   position: fixed;
   left: 5vw;
@@ -856,37 +732,37 @@ footer {
   border-radius: 2vw;
   background-color: rgb(48, 61, 71);
   opacity: 0;
-  transition: all .5s;
+  transition: all 0.5s;
   min-height: 450px;
 }
-#terminosYCondicionesDesplegable > div{
+#terminosYCondicionesDesplegable > div {
   background-color: rgb(75, 90, 102);
   margin: auto 4vw;
   height: 50vh;
   border-radius: 1vh;
   overflow-y: scroll;
-  min-height: 300px;  
+  min-height: 300px;
 }
-#terminosYCondicionesDesplegable > div > p{
+#terminosYCondicionesDesplegable > div > p {
   background-color: rgb(75, 90, 102);
   margin: 4vw;
   margin-bottom: 5vw;
   font-size: var(--pFontSize);
 }
-#terminosYCondicionesDesplegable h1{
+#terminosYCondicionesDesplegable h1 {
   margin: 2vw;
   text-align: center;
   font-size: var(--h1FontSize);
 }
-#terminosYCondicionesDesplegable > div::-webkit-scrollbar{
+#terminosYCondicionesDesplegable > div::-webkit-scrollbar {
   background: none;
   width: 1vw;
 }
-#terminosYCondicionesDesplegable > div::-webkit-scrollbar-thumb{
+#terminosYCondicionesDesplegable > div::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.705);
   border-radius: 1vw;
 }
-#terminosYCondicionesDesplegable button{
+#terminosYCondicionesDesplegable button {
   background-color: var(--HiveRedColor);
   display: flex;
   margin: auto;
@@ -895,15 +771,15 @@ footer {
   margin-bottom: 1vw;
   border-radius: 5vw;
   border: 2px solid white;
-  padding: .6vw;
+  padding: 0.6vw;
   font-size: calc(var(--pFontSize) - 10%);
-  transition: all .2s;
+  transition: all 0.2s;
   cursor: pointer;
 }
-#terminosYCondicionesDesplegable button:active{
+#terminosYCondicionesDesplegable button:active {
   border: 2px solid rgb(0, 0, 0);
 }
-#terminosYCondicionesDesplegable button:hover{
+#terminosYCondicionesDesplegable button:hover {
   background-color: orangered;
 }
 .footerSWC a > img {
@@ -928,8 +804,8 @@ footer {
   margin-top: 0;
   width: 80%;
 }
-@media screen and (max-height: 400px){
-  #terminosYCondicionesDesplegable{
+@media screen and (max-height: 400px) {
+  #terminosYCondicionesDesplegable {
     top: 80px;
   }
 }
@@ -959,8 +835,8 @@ footer {
 }
 @media screen and (max-width: 600px) {
   :root {
-    --h1FontSize: 4vw;
-    --pFontSize: 2.8vw;
+    --h1FontSize: 4.1vw;
+    --pFontSize: 2.95vw;
   }
   nav {
     grid-template-columns: 33.33% 33.33% 33.33%;
@@ -971,7 +847,7 @@ footer {
   nav .deployable {
     display: flex;
   }
-  .darkLightModeDiv{
+  .darkLightModeDiv {
     display: flex;
   }
   .principal {
@@ -1028,7 +904,7 @@ footer {
   }
   .directiva > div > div {
     width: 20%;
-    background-position: center
+    background-position: center;
   }
   .swcDivider > hr {
     border-width: 1px;
@@ -1045,7 +921,6 @@ footer {
   .eventosTitleContainer img {
     width: 6vw;
   }
-
   .informacion h3 {
     font-size: 3.5vw;
   }
