@@ -835,8 +835,11 @@ footer {
 }
 @media screen and (max-width: 600px) {
   :root {
-    --h1FontSize: 4.1vw;
-    --pFontSize: 2.95vw;
+    --h1FontSize: 4.6vw;
+    --pFontSize: 3.5vw;
+  }
+  h5 {
+    font-size: calc(var(--pFontSize) / 1.5);
   }
   nav {
     grid-template-columns: 33.33% 33.33% 33.33%;
