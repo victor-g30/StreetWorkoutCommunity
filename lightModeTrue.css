@@ -10,12 +10,17 @@ nav * {
 #dividerModeradores1,
 #dividerModeradores2,
 .swcDivider img,
-.eventNav ul li,
 .undertitle,
 #submitButton,
 .contact {
   filter: invert();
 }
+
+.eventNav ul li{
+  color: white;
+  background-color: black;
+}
+
 .directiva a div {
   border: solid 0.8vw black;
 }

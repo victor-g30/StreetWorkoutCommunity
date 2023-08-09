@@ -3,7 +3,6 @@
 const loadingPage = document.getElementById("loadingPage");
 const deployableButton = document.getElementById("deployable");
 const deployMenu = document.getElementById("deployed");
-const main = document.querySelector("main");
 const ex = document.getElementById("ex");
 const navSticky = document.querySelector("nav");
 const elemGuide = document.querySelectorAll(".divider");
@@ -241,6 +240,7 @@ function addEvents(eventPrint, fatherEventDiv) {
     <div class="eventNav" data-value="0">
                 <ul id="moveButtons">
                     <li class="buttons" value="1"><</li>
+                    <li class="contador">1</li>
                     <li class="buttons" value="2">></li>
                 </ul>
             </div>
@@ -258,7 +258,12 @@ function moveEvent(target, parentDiv) {
   parentDiv.scroll(0, 0);
   // Si se presiona el primer boton, se disminuye el valor del data-value que contiene una referencia de donde se encuentra ubicado el slider
   if (target == 1) {
-    if (parseInt(parentDiv.getAttribute("data-value")) > 0) {
+    if (parentDiv.getAttribute("data-value") === "0") {
+      parentDiv.setAttribute(
+        "data-value",
+        parentDiv.nextElementSibling.childElementCount - 1
+      );
+    } else if (parseInt(parentDiv.getAttribute("data-value")) > 0) {
       parentDiv.setAttribute(
         "data-value",
         parseInt(parentDiv.getAttribute("data-value")) - 1
@@ -268,6 +273,11 @@ function moveEvent(target, parentDiv) {
   // Si se presiona el segundo boton, se aumenta el valor del data-value que contiene una referencia de donde se encuentra ubicado el slider
   else if (target == 2) {
     if (
+      parseInt(parentDiv.getAttribute("data-value")) ===
+      parentDiv.nextElementSibling.childElementCount - 1
+    ) {
+      parentDiv.setAttribute("data-value", 0);
+    } else if (
       parseInt(parentDiv.getAttribute("data-value")) <
       parentDiv.nextElementSibling.childElementCount - 1
     )
@@ -282,7 +292,8 @@ function moveEvent(target, parentDiv) {
     parentDiv.nextElementSibling.clientWidth *
       parseInt(parentDiv.getAttribute("data-value")),
     0
-  );
+  )
+  parentDiv.childNodes[1].childNodes[3].textContent = parseInt(parentDiv.getAttribute("data-value")) + 1
 }
 
 // Funcion que agrega los divs contenedores de las imagenes de cada evento, para luego ser insertadas en el slider

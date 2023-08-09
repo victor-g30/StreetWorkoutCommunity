@@ -5,12 +5,14 @@
   display: flex;
   padding: 1vw 0;
   z-index: 2;
+  scroll-behavior: auto;
 }
 
 .sliderContainer > div {
   min-width: 100%;
   display: flex;
   justify-content: center;
+  max-width: 1000px;
 }
 
 .sliderContainer div > div {
@@ -39,12 +41,15 @@
   margin: auto;
   background-color: rgb(255, 255, 255);
   width: 4vw;
-  height: 3.4vw;
-  padding-top: .6vw;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   align-content: center;
   color: rgb(0, 0, 0);
   font-size: 2.5vw;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   list-style: none;
   transition: all .5s;
@@ -55,6 +60,25 @@
   color: white;
   cursor: pointer;
   transition: all .5s;
+}
+
+.eventNav ul .contador{
+  background-color: #d00024;;
+  color: white;
+  width: 3.5vw;
+  height: 3.5vw;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+}
+
+.eventNav ul .contador:hover{
+  background-color: #d00024;;
+  color: white;
+  cursor: auto;
+  transition: none;
 }
 
 .moveButtons{
@@ -72,8 +96,5 @@
 @media screen and (min-width: 1024px) {
   .sliderContainer div > img {
     width: 80%;
-  }
-  .sliderContainer {
-    width: 1000px;
   }
 }
