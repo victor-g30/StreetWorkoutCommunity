@@ -717,7 +717,7 @@ footer {
 }
 #terminosYCondiciones {
   font-weight: 500;
-  font-size: 1.5vw;
+  font-size: calc(var(--pFontSize)/2);
   text-transform: uppercase;
   text-decoration: underline;
   cursor: pointer;
@@ -953,7 +953,7 @@ footer {
     justify-self: center;
   }
   .footerMenu li a {
-    font-size: 2vw;
+    font-size: calc(var(--pFontSize)/1.5);
   }
   .footerRedes img {
     width: 7vw;
