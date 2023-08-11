@@ -5,7 +5,7 @@
   display: flex;
   padding: 1vw 0;
   z-index: 2;
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 .sliderContainer > div {
