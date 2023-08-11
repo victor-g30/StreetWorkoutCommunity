@@ -224,6 +224,7 @@ deployButtonTermsAndConditions.addEventListener("click", () => {
 // Función que agrega los divs html de cada evento del objeto EventsList
 function addEvents(eventPrint, fatherEventDiv) {
   for (let i = eventPrint[0]; i < eventPrint[1]; i++) {
+    let images = eventImgSumHTML(transfDriveLink(eventsList.imgs[i]))
     let event = `<div>
     <h2>${eventsList.title[i]}</h2>
     <p>
@@ -245,7 +246,7 @@ function addEvents(eventPrint, fatherEventDiv) {
                 </ul>
             </div>
             <div class="sliderContainer">
-                ${eventImgSumHTML(transfDriveLink(eventsList.imgs[i]))}
+                ${images}
             </div>
   </div>`;
     fatherEventDiv.insertAdjacentHTML("beforeend", event);
@@ -254,59 +255,61 @@ function addEvents(eventPrint, fatherEventDiv) {
 
 // Funcion que agrega funcionalibilidad a los botones de los sliders / galerias
 function moveEvent(target, parentDiv) {
+  let dataValueAttr = parseInt(parentDiv.getAttribute("data-value"));
+  let elemCountNum = parentDiv.nextElementSibling.childElementCount - 1;
+  let setATTR = (valueToSet) => {
+    parentDiv.setAttribute("data-value", valueToSet);
+  };
+
   // Se mueve el scroll a 0 para utilizarlo de referencia
   parentDiv.scroll(0, 0);
-  // Si se presiona el primer boton, se disminuye el valor del data-value que contiene una referencia de donde se encuentra ubicado el slider
-  if (target == 1) {
-    if (parentDiv.getAttribute("data-value") === "0") {
-      parentDiv.setAttribute(
-        "data-value",
-        parentDiv.nextElementSibling.childElementCount - 1
-      );
-    } else if (parseInt(parentDiv.getAttribute("data-value")) > 0) {
-      parentDiv.setAttribute(
-        "data-value",
-        parseInt(parentDiv.getAttribute("data-value")) - 1
-      );
-    }
-  }
-  // Si se presiona el segundo boton, se aumenta el valor del data-value que contiene una referencia de donde se encuentra ubicado el slider
-  else if (target == 2) {
-    if (
-      parseInt(parentDiv.getAttribute("data-value")) ===
-      parentDiv.nextElementSibling.childElementCount - 1
-    ) {
-      parentDiv.setAttribute("data-value", 0);
-    } else if (
-      parseInt(parentDiv.getAttribute("data-value")) <
-      parentDiv.nextElementSibling.childElementCount - 1
-    )
-      parentDiv.setAttribute(
-        "data-value",
-        parseInt(parentDiv.getAttribute("data-value")) + 1
-      );
+
+  switch (target) {
+    // Si se presiona el primer boton, se disminuye el valor del data-value que contiene una referencia de donde se encuentra ubicado el slider
+    case 1:
+      if (dataValueAttr === 0) {
+        setATTR(elemCountNum);
+      } else if (dataValueAttr > 0) {
+        setATTR(dataValueAttr - 1);
+      }
+      break;
+    // Si se presiona el segundo boton, se aumenta el valor del data-value que contiene una referencia de donde se encuentra ubicado el slider
+
+    case 2:
+      if (dataValueAttr === elemCountNum) {
+        setATTR(0);
+      } else if (dataValueAttr < elemCountNum) setATTR(dataValueAttr + 1);
+      break;
   }
   // Luego de que se identifica que boton se presiono, se utiliza el valor de referencia del data-value y se multiplica para hacer scroll
-  // En CSS cada elemento dentro del slider tiene un width del 100%, por lo que para moverse por los demas elementos habria que multiplicar el width del div por el data-value y hacer el scroll (Que es hidden)
+
+  dataValueAttr = parseInt(parentDiv.getAttribute("data-value"));
+
   parentDiv.nextElementSibling.scroll(
-    parentDiv.nextElementSibling.clientWidth *
-      parseInt(parentDiv.getAttribute("data-value")),
+    parentDiv.nextElementSibling.clientWidth * dataValueAttr,
     0
-  )
-  parentDiv.childNodes[1].childNodes[3].textContent = parseInt(parentDiv.getAttribute("data-value")) + 1
+  );
+  // Enumerador de imagenes
+  parentDiv.childNodes[1].childNodes[3].textContent = dataValueAttr + 1;
 }
 
 // Funcion que agrega los divs contenedores de las imagenes de cada evento, para luego ser insertadas en el slider
-function eventImgSumHTML(arrayImgs) {
-  let newDivImgArray = arrayImgs.map((img) => {
+function eventImgSumHTML(arrayImgsLinks) {
+
+  let htmlDivImgArray = arrayImgsLinks.map((img) => {
     let divImg = `<div><div class="imageSlider" data-value="${img}" style="background-image: url(${img}); background-position: center; background-size: cover;"></div></div>`;
     return divImg;
   });
-  let HTMLToInject = "";
-  for (let i = 0; i < newDivImgArray.length; i++) {
-    HTMLToInject += newDivImgArray[i];
-  }
-  return HTMLToInject;
+  
+  let HTMLToInject = (array) => {
+    let divs= ""
+    for (let i = 0; i < array.length; i++) {
+      divs += array[i];
+    }
+    return divs
+  };
+  
+  return HTMLToInject(htmlDivImgArray);
 }
 
 // Funcion que modifica las hojas de estilo dependiendo del modo seleccionado, y cambia los iconos necesarios
@@ -331,8 +334,8 @@ function darkLightMode() {
 // Funcion que inserta los ID de los links directos de Google Drive dentro de un formato valido para HTML, para reducir el tiempo necesario para insertar nuevos eventos. Puede recibir un array de links GD o un link unico.
 function transfDriveLink(links) {
   if (Array.isArray(links)) {
-    links = links.map((link) => {
-      let id = link.slice(32, 65);
+    links = links.map((linkSelected) => {
+      let id = linkSelected.slice(32, 65);
       return `http://drive.google.com/uc?export=view&id=${id}`;
     });
   } else if (typeof links === "string") {
